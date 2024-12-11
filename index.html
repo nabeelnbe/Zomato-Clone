@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <!--Css file-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--Zomato icon-->
+    <link rel="icon" href="data:image/png;base64,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">
+    
+    <!--font libraries-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="app-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="10" height="10" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 gvsUip"><title>download-app</title><path d="M18.5793 9.18939H16.5865H16.3199C15.7307 9.18939 15.2529 9.6672 15.2529 10.2583V10.3742C15.2529 10.9659 15.7307 11.444 16.3207 11.444H18.3156H18.5793C19.1696 11.444 19.6488 10.9639 19.6488 10.3742L19.6477 10.2569C19.6488 9.6672 19.1696 9.18939 18.5793 9.18939Z"></path><path d="M18.5804 6.52262H18.1097V1.35122C18.1097 0.607964 17.5017 0 16.7582 0H7.84167C7.09841 0 6.49045 0.608249 6.49045 1.35122V5.06151C4.69196 6.07821 2.83696 7.14029 2.83296 7.14286C1.82597 7.5573 0.350586 8.89453 0.350586 12.0522C0.350586 12.3342 0.369139 12.5945 0.395113 12.846C0.40339 12.9197 0.412524 12.9904 0.422514 13.0615C0.448488 13.2462 0.481027 13.4229 0.519845 13.5907C0.533831 13.6506 0.544678 13.7131 0.559805 13.7705C0.612039 13.9646 0.67255 14.1467 0.740482 14.32C0.774733 14.4059 0.811839 14.4841 0.84923 14.5646C0.88919 14.6494 0.929436 14.7327 0.972535 14.8106C1.02249 14.9045 1.07244 14.995 1.12724 15.0809C1.14037 15.1009 1.15464 15.1192 1.16805 15.1394C2.46847 17.1052 4.8675 17.114 4.8675 17.114H6.49045V18.6494C6.49045 19.3918 7.09841 19.9997 7.84167 19.9997H16.7579C17.5014 19.9997 18.1094 19.3915 18.1094 18.6494V16.7767H18.3155V16.7755H18.5784C19.1695 16.7755 19.6487 16.2974 19.6476 15.7063L19.6487 15.5898C19.6476 14.9996 19.1695 14.5229 18.5792 14.5229H18.3155H16.5861H16.3195C15.7292 14.5229 15.2525 15.0007 15.2525 15.5907V15.7091C15.2525 16.2977 15.7304 16.7775 16.3203 16.7775H17.1692V17.5008H7.43036V7.79877C7.91959 7.48851 8.37256 7.18995 8.63088 6.98987C9.93957 5.97774 11.1818 5.17169 11.3499 4.4407C11.5688 3.49222 10.8407 2.69302 9.57765 3.34922C9.17976 3.55587 8.36315 4.00885 7.43036 4.53261V2.14129L17.1692 2.14271V6.52205H16.5861V6.52319H16.3209C15.7304 6.52319 15.2511 7.001 15.2511 7.59269V7.70858C15.2511 8.29999 15.7303 8.77665 16.3195 8.77665H16.5846H18.3141H18.5798C19.1695 8.77665 19.6476 8.29884 19.6476 7.70858V7.58955C19.6487 7.00186 19.1709 6.52262 18.5804 6.52262ZM12.2986 17.9752C12.6731 17.9752 12.9751 18.2774 12.9751 18.6511C12.9751 19.0255 12.6728 19.3267 12.2986 19.3267C11.9256 19.3267 11.6242 19.0247 11.6242 18.6511C11.6247 18.2786 11.927 17.9752 12.2986 17.9752ZM13.7266 1.30098H10.8735C10.7839 1.30098 10.7097 1.2282 10.7097 1.13829C10.7097 1.04695 10.7839 0.974169 10.8735 0.974169H13.7266C13.8163 0.974169 13.8893 1.04667 13.8893 1.13829C13.8893 1.22792 13.8163 1.30098 13.7266 1.30098Z"></path><path d="M18.5788 11.8561H18.3151H16.3193C15.7302 11.8561 15.251 12.3353 15.251 12.9253V13.0423C15.251 13.6329 15.7291 14.1107 16.3193 14.1107H16.5845H18.3139H18.5782C19.1693 14.1107 19.646 13.6329 19.6474 13.0423V12.9253C19.6472 12.3353 19.1705 11.8561 18.5788 11.8561Z"></path></svg>
+                <a href="">Get the App </a>
+            </div>
+            <div class="nav-item">
+                <ul>
+                    <li><a src="" tabindex="-1" class="sc-3o0n99-5 sc-ecFaGM kKxJqR">Investor Relations</a></li>
+                    <li><a src="" tabindex="-1" class="sc-3o0n99-5 sc-ecFaGM kKxJqR">Add restaurant</a></li>
+                    <li><a src="" tabindex="-1" class="sc-3o0n99-5 sc-ecFaGM kKxJqR">Log in</a></li>
+                    <li><a src="" tabindex="-1" class="sc-3o0n99-5 sc-ecFaGM kKxJqR">Sign up</a></li>
+            </div>
+        </nav>
+        
+        <div class="content-wrapper">
+            <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="">
+            <h1>Discover the best food & drinks in <span>Thrissur</span></h1>
+
+            <div class="search-box">
+                <div class="left-search">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Thrissur">
+                    <i class="fas fa-caret-down" ></i>
+                </div>
+                <div class="right-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--------- Order Section --------->
+    <div class="order-section">
+        <div class="order">
+            <div class="card">
+                <a href=""><img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" alt=""></a>
+                <div class="content">
+                    <p class="heading">Order Online</p>
+                    <p class="text">Stay home and order to your doorstep</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href=""><img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" alt=""></a>
+                <div class="content">
+                    <p class="heading">Dining</p>
+                    <p class="text">View the city's favourite dining venues</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------- Collections Section --------->
+    <div class="Collections">
+        <h1>Collections</h1>
+        <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Thrissur, based on trends</p>
+        <div class="dropdown">
+            <p>All collections in Thrissur <i class="fas fa-caret-right"></i></p>
+        </div>
+        
+
+        <div class="Collections-card">
+            <div class="card">
+                <img src="https://b.zmtcdn.com/data/collections/532af3ab24d29dbddcdcd16921ada06f_1535628640.jpg?output-format=webp" alt="">
+                <div class="content">
+                    <p>Great Breakfasts</p>
+                    <p>6 Places <i class="fas fa-caret-right"></i></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://b.zmtcdn.com/data/collections/ecec46ffb5bc20bebe0857c47f630fc5_1535354925.jpg?output-format=webp" alt="">
+                <div class="content">
+                    <p>Brilliant Biryanis</p>
+                    <p>6 Places <i class="fas fa-caret-right"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------- Popular localities Section --------->
+    <div class="Collections">
+        <h1><span>Popular localities in and around </span>Thrissur</h1>
+        <div class="popular-locations">
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Poothole</p>
+                        <p class="places">194 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Chalakudy</p>
+                        <p class="places">119 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Kizhakkumpattukara</p>
+                        <p class="places">112 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Guruvayur Locality</p>
+                        <p class="places">96 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Irinjalakuda Locality</p>
+                        <p class="places">71 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Puzhakkal</p>
+                        <p class="places">69 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Ayyanthole</p>
+                        <p class="places">64 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">Peringavu</p>
+                        <p class="places">54 places</p>
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="box">
+                <div class="places">
+                    <a href="">
+                        <p class="city">see more</p>
+                        
+                    </a>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--------- app Section --------->
+    <div class="app-sectoin">
+        <div class="app">
+            <div class="app-img">
+                <img src="https://b.zmtcdn.com/data/o2_assets/ce5bc038a8a2d4f8f24465c8826182af1726501431.png" alt="">
+            </div>
+            <div class="get-app">
+                <h2>Get the Zomato app</h2>
+                <p>We will send you a link, open it on your phone to download   <br> the app</p>
+                <div class="email-phone">
+                    <input type="radio" checked>Email &nbsp; &nbsp;&nbsp;
+                    <input type="radio">Phone
+                </div>
+                <div class="submit">
+                    <input type="text" placeholder="Email">
+                    <button>Share App Link  </button>
+                </div>
+                <p>Download app from</p>
+                <div class="app-store">
+                    
+                    
+                    <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                    <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------- Explore Section --------->
+
+    <div class="Collections">
+        <h1>Explore options near me</h1>
+        <div class="option">
+            <button>Popular Cuisines Near Me</button>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="option">
+            <button>Popular Restaurant Types Near me</button>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="option">
+            <button>Top Restaurant Chains</button>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="option">
+            <button>Cities We Deliver To</button>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </div>
+
+    <!--------- Footer Section --------->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="">
+                
+                <div class="footer-btn">
+                    <button>India<i class="fa-solid fa-angle-down"></i></button>
+                    <button>English<i class="fa-solid fa-angle-down"></i></button>
+                </div>
+            </div>
+            <div class="footer-link">
+                <div class="colume">
+                    <div>ABOUT ZOMATO</div>
+                    <ul class="col-link">
+                        <li><a href="">Who We Are</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Work With Us</a></li>
+                        <li><a href="">Investor Relations</a></li>
+                        <li><a href="">Report Fraud</a></li>
+                        <li><a href="">Press Kit</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="colume">
+                    <div>ZOMAVERSE</div>
+                    <ul class="col-link">
+                        <li><a href="">Zomato</a></li>
+                        <li><a href="">Blinkit</a></li>
+                        <li><a href="">District</a></li>
+                        <li><a href="">Feeding India</a></li>
+                        <li><a href="">Zomato Live</a></li>
+                        <li><a href="">Zomaland</a></li>
+                        <li><a href="">Weather Union</a></li>
+                    </ul>
+                </div>
+                <div class="colume">
+                    <div>FOR RESTAURANTS</div>
+                    <ul class="col-link">
+                        <li><a href="">Partner With Us</a></li>
+                        <li><a href="">Apps For You</a></li>
+                    </ul>
+                </div>
+                <div class="colume">
+                    <div>LEARN MORE</div>
+                    <ul class="col-link">
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="colume">
+                    <div>SOCIAL lINKS</div>
+                    <ul class="col-link">
+                        <div class="meadia">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM7.0625 8.375H4.75V15.4375H7.0625V8.375ZM7.25 6.1875C7.25 5.5 6.75 5 5.9375 5C5.125 5 4.5625 5.5 4.5625 6.1875C4.5625 6.875 5.0625 7.4375 5.875 7.4375C6.6875 7.4375 7.25 6.875 7.25 6.1875ZM15.5 11.375C15.5 9.1875 14.3125 8.1875 12.8125 8.1875C11.5625 8.1875 11 8.875 10.6875 9.375V8.375H8.375C8.375 9.0625 8.375 15.4375 8.375 15.4375H10.6875V11.5C10.6875 11.3125 10.6875 11.0625 10.75 10.9375C10.9375 10.5 11.3125 10.0625 11.9375 10.0625C12.75 10.0625 13.125 10.6875 13.125 11.6875V15.4375H15.4375C15.5 15.4375 15.5 11.375 15.5 11.375Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.1875 5C8.8125 5 8.625 5 8.0625 5C7.5 5.0625 7.125 5.125 6.8125 5.25C6.5 5.375 6.1875 5.5625 5.875 5.875C5.5625 6.1875 5.375 6.4375 5.25 6.8125C5.125 7.125 5 7.5 5 8.0625C5 8.625 5 8.75 5 10.1875C5 11.625 5 11.8125 5.0625 12.375C5.0625 12.9375 5.1875 13.3125 5.3125 13.625C5.4375 13.9375 5.625 14.25 5.9375 14.5625C6.1875 14.8125 6.5 15 6.875 15.1875C7.1875 15.3125 7.5625 15.4375 8.125 15.4375C8.6875 15.4375 8.875 15.5 10.25 15.5C11.6875 15.5 11.875 15.5 12.4375 15.4375C13 15.375 13.375 15.3125 13.6875 15.1875C14 15.0625 14.3125 14.875 14.625 14.5625C14.9375 14.25 15.125 14 15.25 13.625C15.375 13.3125 15.5 12.875 15.5 12.375C15.5625 11.8125 15.5625 11.625 15.5625 10.1875C15.5625 8.75 15.5625 8.625 15.5 8.0625C15.5 7.5 15.375 7.125 15.25 6.8125C15.125 6.4375 14.9375 6.1875 14.625 5.875C14.375 5.625 14.0625 5.4375 13.6875 5.25C13.375 5.125 12.9375 5.0625 12.4375 5C11.8125 5 11.625 5 10.1875 5ZM9.75 5.9375C9.875 5.9375 10.0625 5.9375 10.1875 5.9375C11.5625 5.9375 11.75 5.9375 12.3125 5.9375C12.8125 5.9375 13.0625 6.0625 13.25 6.125C13.5 6.25 13.6875 6.375 13.875 6.5C14.0625 6.625 14.1875 6.8125 14.25 7.125C14.3125 7.3125 14.4375 7.5625 14.4375 8.0625C14.5 8.625 14.5 8.8125 14.5 10.1875C14.5 11.5625 14.5 11.75 14.4375 12.3125C14.4375 12.8125 14.3125 13.125 14.25 13.3125C14.1875 13.5625 14.0625 13.6875 13.875 13.9375C13.6875 14.125 13.5 14.1875 13.25 14.3125C13.0625 14.375 12.8125 14.5 12.3125 14.5C11.75 14.5 11.5625 14.5625 10.1875 14.5625C8.8125 14.5625 8.625 14.5625 8.0625 14.5C7.5625 14.5 7.3125 14.375 7.125 14.3125C6.875 14.1875 6.6875 14.125 6.5 13.9375C6.3125 13.75 6.1875 13.5625 6.125 13.3125C6.0625 13.125 6 12.875 5.9375 12.3125C5.9375 11.75 5.9375 11.625 5.9375 10.1875C5.9375 8.8125 5.9375 8.625 5.9375 8.0625C6 7.5625 6.0625 7.3125 6.125 7.125C6.25 6.875 6.375 6.6875 6.5 6.5C6.625 6.3125 6.875 6.1875 7.125 6.125C7.3125 6.0625 7.5625 5.9375 8.0625 5.9375C8.5625 5.9375 8.75 5.9375 9.75 5.9375ZM13 6.8125C12.6875 6.8125 12.375 7.0625 12.375 7.4375C12.375 7.8125 12.625 8.0625 13 8.0625C13.375 8.0625 13.625 7.8125 13.625 7.4375C13.625 7.0625 13.3125 6.8125 13 6.8125ZM10.1875 7.5C8.75 7.5 7.5 8.6875 7.5 10.1875C7.5 11.6875 8.6875 12.875 10.1875 12.875C11.6875 12.875 12.875 11.6875 12.875 10.1875C12.875 8.6875 11.6875 7.5 10.1875 7.5ZM10.1875 8.4375C11.125 8.4375 11.9375 9.1875 11.9375 10.1875C11.9375 11.1875 11.1875 11.9375 10.1875 11.9375C9.25 11.9375 8.4375 11.1875 8.4375 10.1875C8.4375 9.1875 9.25 8.4375 10.1875 8.4375Z"></path></svg>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM15.1875 7.4375C15.0625 7 14.6875 6.625 14.25 6.5C13.4375 6.25 10.1875 6.25 10.1875 6.25C10.1875 6.25 6.9375 6.25 6.125 6.5C5.6875 6.625 5.3125 7 5.1875 7.4375C5 8.25 5 10 5 10C5 10 5 11.75 5.25 12.5625C5.375 13 5.75 13.375 6.1875 13.5C7 13.75 10.25 13.75 10.25 13.75C10.25 13.75 13.5 13.75 14.3125 13.5C14.75 13.375 15.125 13 15.25 12.5625C15.5 11.75 15.5 10 15.5 10C15.5 10 15.4375 8.25 15.1875 7.4375ZM9.25 11.75V8.5L11.875 10.125L9.25 11.75Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 cvuzKA"><path d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.75 15.4375V10.1875H12.1875L12.375 8.375H10.75V7.5C10.75 7.0625 10.8125 6.8125 11.5 6.8125H12.375V5H10.9375C9.1875 5 8.625 5.875 8.625 7.3125V8.375H7.5V10.1875H8.5625V15.4375C8.5625 15.4375 10.75 15.4375 10.75 15.4375Z"></path></svg>
+                            <br>
+                            <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                            <br>
+                            <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                        </div>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <hr>
+                    <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
